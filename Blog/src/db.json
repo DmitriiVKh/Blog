@@ -3,9 +3,9 @@
 		{
 			"id": "001",
 			"login": "dima",
-			"password": "123",
+			"password": "1234567",
 			"registed_at": "2024-02-17",
-			"role.id": "0"
+			"role_id": "0"
 		}
 	],
 
