@@ -12,3 +12,6 @@ npm install styled-components prop-types react-hook-form yup react-router redux 
 json-server --watch src/db.json --port 3005
 
 5228600587132186 настасия П
+
+API погода
+95d05ceecec9d23fd5ffb00f0281a669
