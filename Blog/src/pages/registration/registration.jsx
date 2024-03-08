@@ -34,13 +34,6 @@ const regFormSchema = yup.object().shape({
 		.oneOf([yup.ref('password'), null], 'Повтор пароля не совпадает'),
 });
 
-// const ErrorMessage = styled.div`
-// 	font-size: 18px;
-// 	margin: 10px 0 0;
-// 	padding: 10px;
-// 	background-color: #fcadad;
-// `;
-
 const RegistrationContainer = ({ className }) => {
 	const {
 		register,
@@ -60,22 +53,7 @@ const RegistrationContainer = ({ className }) => {
 
 	const dispatch = useDispatch();
 
-	// const store = useStore();
-
 	const roleId = useSelector(selectUserRole);
-
-	// useEffect(() => {
-	// 	let currentWasLogout = store.getState().app.wasLogout;
-
-	// 	return store.subscribe(() => {
-	// 		let previousWasLogout = currentWasLogout;
-	// 		currentWasLogout = store.getState().app.wasLogout;
-
-	// 		if (currentWasLogout !== previousWasLogout) {
-	// 			reset();
-	// 		}
-	// 	});
-	// }, [reset, store]);
 
 	useResetForm(reset);
 
@@ -89,6 +67,9 @@ const RegistrationContainer = ({ className }) => {
 				}
 				if (res && res.res) {
 					dispatch(setUser(res.res));
+					// Начало. Код позволяющий не сбрасывать авторизацию при перезагрузке
+					sessionStorage.setItem('userData', JSON.stringify(res.res));
+					// Конец
 				} else {
 					setServerError('Не удалось получить данные при регистрации');
 				}
