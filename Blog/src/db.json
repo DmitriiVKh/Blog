@@ -112,7 +112,36 @@
       "content": "1234567890"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "ed26",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2045-06-26 16:56",
+      "content": "111113"
+    },
+    {
+      "id": "595a",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2034-09-14 13:58",
+      "content": "папвы"
+    },
+    {
+      "id": "c611",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2034-03-16 08:13",
+      "content": "авыфафа"
+    },
+    {
+      "id": "0aa8",
+      "author_id": "001",
+      "post_id": "001",
+      "published_at": "2039-01-08 01:10",
+      "content": "фааав"
+    }
+  ],
   "sessions": [
     {
       "id": "5b37",
