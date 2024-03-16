@@ -6,20 +6,6 @@
       "password": "1234567",
       "registed_at": "2024-02-17",
       "role_id": "0"
-    },
-    {
-      "id": "b9e0",
-      "login": "ivan",
-      "password": "123456",
-      "registed_at": "2051-02-02 13:38",
-      "role_id": 2
-    },
-    {
-      "id": "a1b3",
-      "login": "ivan2",
-      "password": "123456",
-      "registed_at": "2056-04-02 21:47",
-      "role_id": 2
     }
   ],
   "roles": [
