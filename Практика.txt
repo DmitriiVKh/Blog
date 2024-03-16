@@ -1,0 +1,12 @@
+cd blog    
+  npm install
+  npm run dev
+Проверим форматирование. В VS Code — Alt + Shift + F.
+
+npm i eslint-config-prettier eslint-plugin-prettier prettier
+
+npm i -g json-server
+
+npm install styled-components prop-types react-hook-form yup react-router redux redux-thunk react-redux
+
+json-server --watch src/db.json --port 3005
