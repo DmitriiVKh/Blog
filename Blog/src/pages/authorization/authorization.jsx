@@ -38,13 +38,6 @@ const StyledLink = styled(Link)`
 	font-size: 18px;
 `;
 
-// const ErrorMessage = styled.div`
-// 	font-size: 18px;
-// 	margin: 10px 0 0;
-// 	padding: 10px;
-// 	background-color: #fcadad;
-// `;
-
 const AuthorizationContainer = ({ className }) => {
 	const {
 		register,
@@ -63,22 +56,7 @@ const AuthorizationContainer = ({ className }) => {
 
 	const dispatch = useDispatch();
 
-	// const store = useStore();
-
 	const roleId = useSelector(selectUserRole);
-
-	// useEffect(() => {
-	// 	let currentWasLogout = store.getState().app.wasLogout;
-
-	// 	return store.subscribe(() => {
-	// 		let previousWasLogout = currentWasLogout;
-	// 		currentWasLogout = store.getState().app.wasLogout;
-
-	// 		if (currentWasLogout !== previousWasLogout) {
-	// 			reset();
-	// 		}
-	// 	});
-	// }, [reset, store]);
 
 	useResetForm(reset);
 
@@ -92,6 +70,9 @@ const AuthorizationContainer = ({ className }) => {
 				}
 
 				dispatch(setUser(res.res));
+				// Начало. Код позволяющий не сбрасывать авторизацию при перезагрузке
+				sessionStorage.setItem('userData', JSON.stringify(res.res));
+				//Конец
 			})
 			.catch((error) => {
 				setServerError(`Ошибка запроса: ${error}`);
