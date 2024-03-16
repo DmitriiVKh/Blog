@@ -1,7 +1,7 @@
 import { useLayoutEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { Header, Footer } from './components';
+import { Header, Footer, Modal } from './components';
 import { Authorization, Post, Registration, Users } from './pages';
 import { setUser } from './actions';
 
@@ -59,10 +59,12 @@ export const Blog = () => {
 					<Route path="/users" element={<Users />} />
 					<Route path="/post" element={<div>Новая статья</div>} />
 					<Route path="/post/:id" element={<Post />} />
+					<Route path="/post/:id/edit" element={<Post />} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
 			</Page>
 			<Footer />
+			<Modal />
 		</AppColumn>
 	);
 };
