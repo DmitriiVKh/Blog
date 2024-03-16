@@ -28,5 +28,6 @@ export const sessions = {
 		const userRole = dbSession.user.roleId;
 
 		return accessRoles.includes(parseInt(userRole, 10));
+		// return accessRoles.includes(userRole);
 	},
 };
