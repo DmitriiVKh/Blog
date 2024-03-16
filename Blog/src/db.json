@@ -6,6 +6,20 @@
       "password": "1234567",
       "registed_at": "2024-02-17",
       "role_id": "0"
+    },
+    {
+      "login": "maks",
+      "password": "1234567",
+      "registed_at": "2042-04-07 14:50",
+      "role_id": 1,
+      "id": "va7zFmp"
+    },
+    {
+      "login": "Ivan",
+      "password": "1234567",
+      "registed_at": "2058-05-01 12:11",
+      "role_id": 2,
+      "id": "EwUfcEr"
     }
   ],
   "roles": [
@@ -140,6 +154,34 @@
       "post_id": "001",
       "published_at": "2039-01-08 01:10",
       "content": "фааав"
+    },
+    {
+      "author_id": "EwUfcEr",
+      "post_id": "001",
+      "published_at": "2035-01-06 22:47",
+      "content": "Ivan",
+      "id": "SRwPHmA"
+    },
+    {
+      "author_id": "va7zFmp",
+      "post_id": "001",
+      "published_at": "2044-06-26 00:03",
+      "content": "maks",
+      "id": "faqrwaW"
+    },
+    {
+      "author_id": "EwUfcEr",
+      "post_id": "001",
+      "published_at": "2056-01-05 01:27",
+      "content": "ghjkl",
+      "id": "q3AkqoF"
+    },
+    {
+      "author_id": "va7zFmp",
+      "post_id": "001",
+      "published_at": "2051-06-29 16:22",
+      "content": "213",
+      "id": "jWA2vD2"
     }
   ],
   "sessions": [
@@ -166,15 +208,26 @@
       }
     },
     {
-      "hash": "0.72200431225646499733272776211379095911979675292969",
+      "hash": "0.33448686077666023308552212256472557783126831054688",
       "user": {
-        "id": "001",
-        "login": "dima",
+        "login": "Ivan",
         "password": "1234567",
-        "registeredAt": "2024-02-17",
-        "roleId": "0"
+        "registed_at": "2058-05-01 12:11",
+        "role_id": 2,
+        "id": "EwUfcEr"
       },
-      "id": "j06ywdN"
+      "id": "7VZpwRM"
+    },
+    {
+      "hash": "0.42968643881676138462921699101570993661880493164063",
+      "user": {
+        "id": "va7zFmp",
+        "login": "maks",
+        "password": "1234567",
+        "registeredAt": "2042-04-07 14:50",
+        "roleId": 1
+      },
+      "id": "aq96ZwM"
     }
   ]
 }

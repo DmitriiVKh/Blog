@@ -8,6 +8,7 @@ import {
 	selectUserSession,
 } from '../../../../selectors';
 import { logout } from '../../../../actions';
+import { checkAccess } from '../../../../utils';
 import styled from 'styled-components';
 
 const RightAligned = styled.div`
@@ -15,12 +16,6 @@ const RightAligned = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 `;
-
-// const StyledIcon = styled.div`
-// 	&:hover {
-// 		cursor: pointer;
-// 	}
-// `;
 
 const UserName = styled.div`
 	font-size: 18px;
@@ -39,6 +34,8 @@ const ControlPanelContainer = ({ className }) => {
 		sessionStorage.removeItem('userData');
 	};
 
+	const isAdmin = checkAccess([ROLE.ADMIN], roleId);
+
 	return (
 		<div className={className}>
 			<RightAligned>
@@ -56,18 +53,20 @@ const ControlPanelContainer = ({ className }) => {
 			<RightAligned>
 				<Icon id="fa-backward" margin="10px 0 0 0" onClick={() => navigate(-1)} />
 
-				<Link to="/post">
-					<Icon id="fa-file-text-o" margin="10px 0 0 17px" />
-				</Link>
-				<Link to="/users">
-					<Icon id="fa-users" margin="10px 0 0 17px" />
-				</Link>
+				{isAdmin && (
+					<>
+						<Link to="/post">
+							<Icon id="fa-file-text-o" margin="10px 0 0 17px" />
+						</Link>
+						<Link to="/users">
+							<Icon id="fa-users" margin="10px 0 0 17px" />
+						</Link>
+					</>
+				)}
 			</RightAligned>
 		</div>
 	);
 };
-
-// export const ControlPanel = styled(ControlPanelContainer);
 
 const StyledControlPanelContainer = styled(ControlPanelContainer)``;
 
